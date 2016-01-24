@@ -1,5 +1,5 @@
 {
-  "name": "Isomorphic React App",
+  "name": "IsomorphicReactApp",
   "version": "0.1.0",
   "devDependencies": {
     "babel-cli": "^6.3.17",

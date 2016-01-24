@@ -1,4 +1,6 @@
 //require('node-jsx').install({extension: '.jsx', harmony: true});
+console.log(global.XMLHttpRequest);
+
 var express = require('express');
 var app     = express();
 var config  = require('./config.js');
@@ -10,7 +12,7 @@ var Router   = require('react-router');
 var RouterLocation = require('history').createLocation;
 
 app.use(express.static(__dirname+'/app'));
-
+console.log(global.XMLHttpRequest);
 // route middleware that will happen on every request
 app.use(function(req, res, next) {
   Router.match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
@@ -28,8 +30,6 @@ app.use(function(req, res, next) {
     }
   });
 });
-
-
 
 app.listen(config.port, function() {
   console.log('Server listening at host: %s', config.host);
